@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c4d">
+  <meta name="description" content="Encontre a linha completa de produtos Vonixx para proteção, limpeza e embelezamento automotivo.">
+  <title>Vonixx | Estética Automotiva</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #102c4d;
+      --navy-deep: #081827;
+      --ink: #172536;
+      --muted: #667586;
+      --green: #21a45b;
+      --green-hover: #188548;
+      --line: #e4eaf0;
+      --surface: #f6f8fa;
+      --white: #fff;
+      --radius: 16px;
+      --shadow: 0 12px 34px rgba(18, 39, 60, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .site-header { background: #fff; border-bottom: 1px solid rgba(20, 44, 70, .08); }
+    .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; text-decoration: none; }
+    .brand img { display: block; width: 54px; height: 54px; object-fit: contain; }
+    .brand-copy { display: grid; gap: 1px; line-height: 1.25; }
+    .brand-copy strong { color: var(--navy); font-size: .96rem; letter-spacing: .035em; }
+    .brand-copy span { color: var(--muted); font-size: .82rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 9px; padding: 13px 20px; background: var(--green); color: #fff; font: inherit; font-weight: 700; text-decoration: none; transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .button:hover { background: var(--green-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(33, 164, 91, .24); }
+    .button:focus-visible, a:focus-visible { outline: 3px solid #88d9a9; outline-offset: 3px; }
+    .button svg { width: 18px; height: 18px; flex: none; }
+    .hero { position: relative; overflow: hidden; padding: 100px 0 106px; color: white; text-align: center; background: linear-gradient(120deg, #102c4d 0%, #174a76 55%, #102c4d 100%); }
+    .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; pointer-events: none; }
+    .hero::before { width: 520px; height: 520px; top: -330px; right: -90px; }
+    .hero::after { width: 360px; height: 360px; bottom: -270px; left: -95px; }
+    .hero-content { position: relative; z-index: 1; max-width: 790px; margin: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px; color: #bfead0; font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 22px; height: 2px; background: #65d28e; }
+    h1 { max-width: 760px; margin: 0 auto 18px; font-size: clamp(2.4rem, 5vw, 4.15rem); letter-spacing: -.045em; line-height: 1.08; }
+    .hero p { max-width: 620px; margin: 0 auto 30px; color: rgba(255,255,255,.82); font-size: clamp(1rem, 2vw, 1.18rem); }
+    .hero .button { padding: 15px 24px; }
+    .solutions { padding: 78px 0 88px; background: var(--surface); }
+    .section-heading { max-width: 700px; margin: 0 auto 38px; text-align: center; }
+    .section-heading .eyebrow { color: var(--green-hover); margin-bottom: 10px; }
+    .section-heading h2 { margin: 0; color: var(--ink); font-size: clamp(1.8rem, 3.4vw, 2.55rem); letter-spacing: -.035em; line-height: 1.2; }
+    .section-heading p { margin: 12px 0 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .card { display: flex; flex-direction: column; min-height: 245px; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(18, 39, 60, .12); }
+    .card-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 21px; color: var(--green-hover); background: #eaf7ef; border-radius: 12px; }
+    .card-icon svg { width: 23px; height: 23px; }
+    .card h3 { margin: 0 0 10px; color: var(--navy); font-size: 1.14rem; line-height: 1.35; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .site-footer { padding: 38px 0 25px; color: rgba(255,255,255,.7); background: var(--navy-deep); text-align: center; font-size: .88rem; }
+    .footer-company { margin: 0 0 11px; color: #fff; font-size: .98rem; }
+    .footer-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 22px; margin: 0; }
+    .footer-details p { margin: 0; }
+    .footer-links { display: flex; justify-content: center; gap: 22px; margin: 18px 0; }
+    .footer-links a { color: #fff; text-decoration-color: rgba(255,255,255,.4); text-underline-offset: 3px; }
+    .footer-links a:hover { color: #9be1b3; }
+    .copyright { padding-top: 17px; margin: 0; border-top: 1px solid rgba(255,255,255,.12); font-size: .8rem; }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 36px, 560px); }
+      .header-inner { min-height: 72px; gap: 12px; }
+      .brand { gap: 10px; }
+      .brand img { width: 44px; height: 44px; }
+      .brand-copy strong { font-size: .82rem; }
+      .brand-copy span { font-size: .74rem; }
+      .header-cta { padding: 11px 13px; font-size: .84rem; white-space: nowrap; }
+      .hero { padding: 78px 0 82px; }
+      .solutions { padding: 62px 0 68px; }
+      .cards { grid-template-columns: 1fr; gap: 16px; }
+      .card { min-height: 0; padding: 24px; }
+      .card-icon { margin-bottom: 16px; }
+    }
+    @media (max-width: 440px) {
+      .container { width: calc(100% - 28px); }
+      .header-inner { flex-wrap: wrap; padding: 12px 0; }
+      .brand { flex: 1 1 100%; }
+      .header-cta { width: 100%; }
+      .hero { padding: 65px 0 70px; }
+      .footer-details { flex-direction: column; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Estética Automotiva, página inicial">
+        <img src="logo.png" alt="Logo">
+        <span class="brand-copy">
+          <strong>ESTÉTICA AUTOMOTIVA</strong>
+          <span>Revendedor Autorizado Vonixx</span>
+        </span>
+      </a>
+      <a class="button header-cta" href="https://wa.me/message/UBT3PMMM5UJTE1" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9.2c.3 1.8 2.1 3.6 3.9 3.9l1-1 2 .9c-.2 1.1-.9 1.7-2.1 1.7-3.2 0-6.5-3.3-6.5-6.5 0-1.2.6-1.9 1.7-2.1l.9 2-1 .1Z" fill="currentColor"/></svg>
+        Atendimento Rápido
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <p class="eyebrow">Revendedor autorizado Vonixx</p>
+        <h1 id="hero-title">Os Melhores Produtos Vonixx do Brasil</h1>
+        <p>Encontre a linha completa para proteção, limpeza e embelezamento do seu veículo.</p>
+        <a class="button" href="#solucoes">Ver Catálogo Completo
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="solutions" id="solucoes" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Do cuidado diário ao profissional</p>
+          <h2 id="solutions-title">Soluções Completas para Você e Seu Negócio</h2>
+          <p>Produtos certos, orientação especializada e condições para cada necessidade.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z" stroke="currentColor" stroke-width="1.8"/><path d="m5 6 7 6 7-6M5 18l5-5m9 5-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Cadastre-se para Novidades e Ofertas Exclusivas</h3>
+            <p>Receba informações sobre lançamentos Vonixx, descontos e cupons.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 8h18v11H3zM7 8V5h10v3M3 12h18m-12 0v2h6v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Venda para Atacado e Varejo</h3>
+            <p>Condições especiais para manutenção residencial e automotiva. Atendimento para estúdios, profissionais e consumidores finais (Atendemos CPF e CNPJ).</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9c.4 1.8 2.2 3.6 4 4l1-.9 2 .8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Atendimento Rápido e Consultoria</h3>
+            <p>Tire dúvidas sobre qual produto usar e agilize seu pedido via WhatsApp para garantir que você não pare.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-company"><strong>Responsável Legal: DENNY AMORIM DE OLIVEIRA</strong></p>
+      <div class="footer-details">
+        <p>CPF: 131.448.964-03</p>
+        <p>WhatsApp de Contato: <a href="https://wa.me/message/UBT3PMMM5UJTE1">(11) 98426-0037</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Links legais">
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+      </nav>
+      <p class="copyright">© 2026. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
